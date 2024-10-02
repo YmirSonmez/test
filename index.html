@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToMarket Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ToMarket Bot</h1>
+        <div id="config-form">
+            <h2>Configuration</h2>
+            <label for="data">Data (one account per line):</label>
+            <textarea id="data" name="data" rows="5"></textarea>
+
+            <label for="proxy">Proxy (optional):</label>
+            <input type="text" id="proxy" name="proxy">
+
+            <label for="interval">Interval (seconds):</label>
+            <input type="number" id="interval" name="interval" value="300">
+
+            <label for="play-game">Play Game:</label>
+            <input type="checkbox" id="play-game" name="play-game">
+
+            <label for="game-low-point">Game Low Point:</label>
+            <input type="number" id="game-low-point" name="game-low-point" value="1">
+
+            <label for="game-high-point">Game High Point:</label>
+            <input type="number" id="game-high-point" name="game-high-point" value="10">
+
+            <label for="add-time-min">Additional Time Min (seconds):</label>
+            <input type="number" id="add-time-min" name="add-time-min" value="60">
+
+            <label for="add-time-max">Additional Time Max (seconds):</label>
+            <input type="number" id="add-time-max" name="add-time-max" value="300">
+
+            <button id="start-bot">Start Bot</button>
+        </div>
+        <div id="log-container">
+            <h2>Bot Logs</h2>
+            <div id="log"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
